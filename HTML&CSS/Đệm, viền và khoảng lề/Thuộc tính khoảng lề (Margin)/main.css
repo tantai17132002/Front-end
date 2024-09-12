@@ -1,0 +1,29 @@
+/* margin: -Kí hiệu nét đứt, tạo khoảng cách hợp lệ vì đẩy các thẻ ra đúng
+ */ 
+
+.box {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    
+    /* đoạn này chăn chữ giữa box*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Đẩy hết toàn bộ về bên trái nằm trên 1 đường thẳng, hết chiều dài có thể bị đẩy xuống*/
+    /* float: left; */
+}
+
+/* cách 2: viết ngắn giống thuộc tính padding*/
+.box1 {
+    background-color: #333;
+    margin: 10px 20px 20px 37px;
+}
+
+/* cách 1:*/ 
+.box2 {
+    background-color: firebrick;
+    margin-top: 20px;
+}
+

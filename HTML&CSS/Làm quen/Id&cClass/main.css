@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+}
+
+
+/* selectors (bộ chọn) tới thuộc tính id thì phải có dấu "#" */
+#first-heading{
+    color: blue;
+}
+
+
+/* Bộ chọn tới thuộc tính class thì phải có dấu "."  */
+.secondly-heading{
+    color: black;
+    font-size: 20px;
+}

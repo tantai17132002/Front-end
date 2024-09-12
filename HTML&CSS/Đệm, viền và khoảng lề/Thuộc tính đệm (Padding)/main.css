@@ -1,0 +1,41 @@
+/* padding: - đệm thêm kích thước vào
+            - Không ôm đối tượng, ký hiệu nét đứt đoạn
+*/
+
+.box {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    
+    /* đoạn này chăn chữ giữa box*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* cách 3 */
+.box1 {
+    background-color: #333;
+    padding: 13px 10px 8px; /* 13: trên, 10 trái và phải, 8: dưới */
+}
+
+/* cách 2 */
+.box2 {
+    background-color: orange;
+    padding: 12px 12px;    /* 10: trên và dưới; 12: trái và phải */
+}
+
+/* cách 1 */
+.box3 {
+    background-color: firebrick;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+/* cách 4: short syntax */ 
+.box4 {
+    background-color: blueviolet;
+    padding: 12px 19px 28px 34px;    /* lần lượt: trên, phải, dưới, trái */
+}

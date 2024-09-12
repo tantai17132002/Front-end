@@ -1,0 +1,42 @@
+/* 1. Dạng màu HEX: dạng màu thập lục phân (16 chữ và số: 0123456789abcdef), vd: #333
+   2. Dạng màu rgba: dạng màu red-green-blue (8 bit: 0-255), chỉ số alpha chạy từ 0 (trong suốt) -> 1 (đặc)*/
+        /* 1 bit: 0 hoặc 1 => 2^8 =256 */
+html, body {
+    margin: 0;
+}
+
+/* chèn nhiều hình ảnh thì ảnh viết trước là hiển thị lên trên, phải trong suốt*/
+.head {
+    width: 100%;
+    height: 100vh;
+    background-image: 
+        /* url(https://png.pngtree.com/png-clipart/20230414/original/pngtree-anime-style-graduation-girl-png-image_9054024.png),  */
+        url(https://cdn.popsww.com/blog/sites/2/2022/10/nhan-vat-nu-anime-cute-1920x1080.jpg);
+    background-size: 100%;    /* chiều ngang của ảnh, chiều dọc: auto */
+    background-repeat: no-repeat; /* Bỏ đi ảnh lặp lại. 
+                                    repeat-x: lặp lại chiều ngang*/
+}
+
+ /* dải màu chuyển đều đặn, mặc định là 180deg*/
+.head2 {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(0, #222, #ddd ); /* 0: hướng xoay: 0-> 360deg (độ)*/ 
+}
+
+/* Chèn ảnh và dải màu kết hợp */
+.head3 {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(0, rgba(23, 222, 34, 0.5), rgba(0, 0, 100, 0.5)),
+    url(https://png.pngtree.com/background/20230614/original/pngtree-anime-white-fox-boy-playing-headphones-in-a-dungeon-picture-image_3525271.jpg); 
+    background-size: 100%;
+}
+
+/* ảnh lặp đi lặp lại ứng dụng của repeat */
+.head4 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2023/07/05/11/42/clover-8108105_640.jpg);
+    background-size: 100px;
+}

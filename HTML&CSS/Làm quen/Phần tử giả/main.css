@@ -1,0 +1,43 @@
+/* 
+    1. ::before và ::after (tạo css cho các thẻ sau và trước)
+    2. ::first-letter: tạo css cho ký tự đầu tiên.
+    3. ::first-line: Tạo css cho dòng thứ nhất.
+    4. ::selection: Tạo css bôi đen chuột. 
+*/
+
+
+/* 1  */
+.box {
+    width: 100%;
+    height: 120px;
+    background-color: red;
+}
+.box::before { 
+    content: ""; /* bắt buộc có mới chạy */
+    display: block; /* Khóa class box lại, khỏi viết lại */
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+}
+.box::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+}
+
+/* 2 */
+h1::first-letter {
+    font-size: 50px;
+}
+
+/* 3 */
+h2::first-line {
+    color: red;
+}
+
+/* 4 */
+h3::selection {
+    background-color: green;
+}

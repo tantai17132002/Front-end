@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+}
+
+.head {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn.popsww.com/blog/sites/2/2022/10/nhan-vat-nu-anime-cute-1920x1080.jpg); 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    border: 20px dashed #ccc; /* dashed: Nét đứt */
+    padding: 20px;
+    box-sizing: border-box;
+    background-origin: content-box; /* Đổ vào từ lớp content */
+}
+
+.head2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn.popsww.com/blog/sites/2/2022/10/nhan-vat-nu-anime-cute-1920x1080.jpg); 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    border: 20px dashed #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    background-origin: padding-box; /* Đổ vào từ lớp padding*/
+}
+
+.head3 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn.popsww.com/blog/sites/2/2022/10/nhan-vat-nu-anime-cute-1920x1080.jpg); 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    border: 20px dashed #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    background-origin: border-box; /* Đổ vào từ lớp border*/
+}

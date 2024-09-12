@@ -1,0 +1,65 @@
+/* 1. relative: đè lên các thẻ */
+h1 {
+    position: relative;
+    top: 100%;
+    margin-top: 50px;
+}
+
+
+/* 2. absolute: dùng cả relative */
+.box {
+    width: 100%;
+    height: 120px;
+    background-color: red;
+    position: relative;  /* Sử dụng thẻ cha làm cố định */
+}
+/* Dùng 2 hướng*/
+.box-child {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    position: absolute;  
+    right: 0;   /* Nếu có right và left: ưu tiên left*/ 
+    top: 0;     /* Nếu có top và bottom: ưu tiên top*/
+}
+
+/* Dùng cả 4 hướng đè lên thẻ cha*/
+.box2 {
+    width: 100%;
+    height: 120px;
+    background-color: blue;
+    position: relative;  /* Sử dụng thẻ cha làm cố định */
+}
+.box-child2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;   
+    top: 0;   
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* 3. fixed: Tạo lớp nổi */
+.header {
+    width: 100%;
+    height: 42px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+ul {
+    height: 2000px;
+}
+
+
+/* 4. Sticky */
+h2 {
+    padding: 0 16px;
+    color: #fff;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}

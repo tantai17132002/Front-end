@@ -1,0 +1,50 @@
+/* I. Đơn vị tuyệt đối: absolute units*/
+    /* Đơn vị pixel: 
+        - 1px = 1 điểm ảnh, máy cấu hình cao có thể nhiều điểm ảnh 
+        - Kích thước không thay đổi*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+h1{
+    font-size: 40px;
+}
+
+
+/* II. Đơn vị tương đối: Relative units. */
+    /*1. Đơn vị % 
+        - phụ thuộc vào 1 thẻ chứa nó
+        - Kích thước thay đổi*/
+        
+.box2 {
+        width: 50%;
+        height: 100px;
+        background-color: red;
+}
+
+    /*2. rem
+        - phụ thuộc vào thẻ html
+        */
+    /*3. em
+        - phụ thuộc vào thẻ cha gần nhất
+        */
+html {
+    font-size: 40px;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+  /*4. vw: viewport width: chiều ngang trình duyệt, vh: viewport height: chiều dọc trình duyệt
+        -Đúng kích thước với trình duyệt
+        */
+/*  */
+.box3 { 
+    width: 50vw;  /* 50% */
+    height: 50vh;
+    background-color: red;
+}

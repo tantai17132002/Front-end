@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>BUTTON</title>
+</head>
+<body>
+    
+    <!-- <div>
+        <button class="btn btn--size-s btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-s btn--warn">OK</button>
+        <button class="btn btn--size-s btn--danger">TRAIN AGAIN</button>
+    </div> -->
+    <div>
+        <button onclick="showSuccessToast();" class="btn btn--success">GO TO NEXT APPROVAL</button>
+        <button onclick="showWarningToast();" class="btn btn--warn">OK</button>
+        <button class="btn btn--danger">TRAIN AGAIN</button>
+    </div>
+    <!-- <div>
+        <button class="btn btn--size-l btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-l btn--warn btn--disabled">OK</button>
+        <button class="btn btn--size-l btn--danger">TRAIN AGAIN</button>
+    </div> -->
+
+    <div id="toast">
+
+        <!-- Success -->
+        <!-- <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast__msg">Tự học từ các bài viết trên internet</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div> -->
+
+        <!-- Info -->
+        <!-- <div class="toast toast--info">
+            <div class="toast__icon">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Info</h3>
+                <p class="toast__msg">Tự học từ các bài viết trên internet</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div> -->
+
+        <!-- Warning -->
+        <!-- <div class="toast toast--warning">
+            <div class="toast__icon">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Warning</h3>
+                <p class="toast__msg">Tự học từ các bài viết trên internet</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div> -->
+        
+        <!-- Error -->
+        <!-- <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Error</h3>
+                <p class="toast__msg">Tự học từ các bài viết trên internet</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div> -->
+
+    </div>
+
+    <script>
+        // Toast function
+        function toast({
+            title = '',
+            message = '',
+            type = 'info',
+            duration = 3000
+        }) {
+            const main = document.getElementById('toast'); 
+            if (main) {
+                const toast = document.createElement('div');
+                
+                //Auto remove toast
+                const autoRemoveId = setTimeout(function() {  // sau khoảng thời gian của duration (ẩn hiện) thì xóa thằng con luôn
+                    main.removeChild(toast);
+                }, duration + 1000);
+
+                //remove toast when clicked
+                toast.onclick = function(e) {
+                    if (e.target.closest('.toast__close')) {
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoveId); 
+                    }
+                };
+
+                const icons = {
+                    success: 'fa-sharp fa-solid fa-circle-check',
+                    info: 'fa-sharp fa-solid fa-circle-info',
+                    warning: 'fa-sharp fa-solid fa-exclamation',
+                    error: 'fa-sharp fa-solid fa-exclamation',
+                };
+                const icon = icons[type];
+                const delay = (duration / 1000).toFixed(2); //tofixed: chia dư thì lấy 2 số thập phân
+
+                toast.classList.add('toast', `toast--${type}`)
+                toast.style.animation = `sliderInLeft ease 0.3s, fadeOut linear 1s ${delay}s forwards`; // forwards: dừng ở điểm cuối animation
+                toast.innerHTML = ` 
+                <div class="toast__icon">
+                <i class="${icon}"></i>
+                </div>
+                <div class="toast__body">
+                <h3 class="toast__title">${title}</h3>
+                <p class="toast__msg">${message}</p>
+                </div>
+                <div class="toast__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                `;
+                main.appendChild(toast);
+            }
+        }
+           
+        function showSuccessToast () {
+            toast({
+                title: 'Thành công!',
+                message: 'Bạn đã đăng ký thành công tại tnttplayer!',
+                type: 'success',
+                duration: 5000 // Hiện ra 3000 mini giây mới ẩn 
+            });
+        }
+
+        function showWarningToast () {
+            toast({
+                title: 'Cảnh báo',
+                message: 'Tài khoản hoặc mật khẩu viết sai.',
+                type: 'warning',
+                duration: 5000 
+            });
+        }
+
+
+    </script>
+
+</body>
+</html>

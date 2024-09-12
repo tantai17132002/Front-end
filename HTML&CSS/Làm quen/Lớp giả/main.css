@@ -1,0 +1,31 @@
+/* 
+    1. :root (đối chiếu tới thẻ html)
+    2. :hover (Kích hoạt khi di chuột lên)
+    3. :active (Bấm vào mới thay đổi)
+    4. :first-child và :last-child (Lớp con đầu tiên và lớp con cuối cùng)
+*/
+
+
+/* 2 */
+h1:hover {
+    color: red;
+}
+
+/* 3 */
+.box {
+    width: 100%;
+    height: 120px;
+    background: rgb(190, 124, 157);
+}
+
+.box:active {
+    background-color: black;
+}
+
+/* 4 */
+li:first-child {
+    color: red;
+}
+li:last-child {
+    color: blue;
+}

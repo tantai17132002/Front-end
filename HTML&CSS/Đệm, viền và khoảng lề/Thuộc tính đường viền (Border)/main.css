@@ -1,0 +1,42 @@
+/* 1. border: -Kí hiệu nét liền, dùng ôm đối tượng
+            - Viền đối tượng */ 
+
+        /* Thông thường border-width là medium, tương ứng với 3px */ 
+
+.box {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    
+    /* đoạn này chăn chữ giữa box*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* cách 3: viết ngắn 1 hướng */
+.box1 {
+    background-color: #333;
+    padding: 10px;
+    border-top: 10px solid #873;
+}
+
+/* cách 2: viết ngắn cả 4 hướng */
+.box2 {
+    background-color: orange;
+    padding: 10px;
+    border: 10px solid #943;
+}
+
+/* cách 1: Viết dài */ 
+.box3 {
+    background-color: firebrick;
+    padding: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-style: solid;  
+    border-color: black;
+}
+

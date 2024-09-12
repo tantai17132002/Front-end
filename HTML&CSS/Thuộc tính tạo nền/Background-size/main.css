@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+}
+
+.head {
+    width: 1000px;
+    height: 100vh;
+    background-image: url(https://cdn.popsww.com/blog/sites/2/2022/10/nhan-vat-nu-anime-cute-1920x1080.jpg); 
+    background-repeat: no-repeat; 
+    background-size: contain; /* Lấy chiều dài nhất có thể trong chiều dọc và chiều, không mất ảnh*/
+}
+
+
+.head2 {
+    width: 1000px;
+    height: 100vh;
+    background-image: url(https://cdn.popsww.com/blog/sites/2/2022/10/nhan-vat-nu-anime-cute-1920x1080.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover;   /* Lấy chiều dài nhất có thể trong chiều dọc và chiều, bị mất ảnh*/
+}
+
+
+ 

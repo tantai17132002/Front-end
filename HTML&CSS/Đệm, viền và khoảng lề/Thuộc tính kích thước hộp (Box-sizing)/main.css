@@ -1,0 +1,15 @@
+/* Box-sizing: - giải quyết tăng pading, border mà giữ nguyên kích thước ban đầu
+               - Nguyên lý hoạt động: kích thước ban đầu - kích thước border - kích thước padding = kích thước content
+               - Nếu ngưỡng border và padding hợp lệ sẽ giữ nguyên kích thước ban đầu, nếu không sẽ thay đổi kích thước 
+               */ 
+
+.box {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background-color: darkorchid;
+    padding: 16px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+

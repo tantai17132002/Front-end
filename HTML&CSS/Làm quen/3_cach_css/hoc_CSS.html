@@ -1,0 +1,36 @@
+<!--
+    1. Internal: Sử dụng 1 thẻ bên trong html.
+    2. External: Sử dụng 1 file bên ngoài rồi link vào html.
+    3. Inline: Viết trong 1 thẻ đó luôn có thuộc tính style.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phong chữ</title>
+        <meta charset="utf-8"> 
+        
+        <!--External-->
+        <link rel="stylesheet" href="main.css">
+
+        <!--Internal-->
+        <style>
+            h1 { 
+                color: red;
+                font-size: 20px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+            <h1 style="color: red;font-size: 20px;">CSS in HTML</h1> <!--Inline-->
+            <ol>
+                <li>Internal</li> 
+                <li>External</li>
+                <li>Inline</li>
+            </ol>
+        </div>
+    </body>
+</html>
